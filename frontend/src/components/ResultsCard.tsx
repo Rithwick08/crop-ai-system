@@ -12,7 +12,7 @@ export function ResultsCard({ prediction, isLoading }: ResultsCardProps) {
   if (isLoading) {
     return (
       <Card className="shadow-lg">
-        <CardHeader className="bg-gradient-to-r from-blue-50 to-green-50 border-b">
+        <CardHeader className="bg-gradient-to-r from-blue-50 to-green-50 dark:from-blue-950/30 dark:to-green-950/30 border-b dark:border-zinc-800">
           <div className="flex items-center gap-2">
             <Sparkles className="h-5 w-5 text-blue-600" />
             <CardTitle>AI Analysis</CardTitle>
@@ -34,7 +34,7 @@ export function ResultsCard({ prediction, isLoading }: ResultsCardProps) {
   if (!prediction) {
     return (
       <Card className="shadow-lg">
-        <CardHeader className="bg-gradient-to-r from-blue-50 to-green-50 border-b">
+        <CardHeader className="bg-gradient-to-r from-blue-50 to-green-50 dark:from-blue-950/30 dark:to-green-950/30 border-b dark:border-zinc-800">
           <div className="flex items-center gap-2">
             <Sparkles className="h-5 w-5 text-blue-600" />
             <CardTitle>Prediction Results</CardTitle>
@@ -43,7 +43,7 @@ export function ResultsCard({ prediction, isLoading }: ResultsCardProps) {
         </CardHeader>
         <CardContent className="pt-6">
           <div className="flex flex-col items-center justify-center py-16 text-center space-y-4">
-            <div className="rounded-full bg-gray-100 p-6">
+            <div className="rounded-full bg-gray-100 dark:bg-zinc-800 p-6">
               <Wheat className="h-16 w-16 text-gray-400" />
             </div>
             <div className="space-y-2">
@@ -78,7 +78,7 @@ export function ResultsCard({ prediction, isLoading }: ResultsCardProps) {
 
   return (
     <Card className="shadow-lg hover:shadow-xl transition-shadow">
-      <CardHeader className="bg-gradient-to-r from-blue-50 to-green-50 border-b">
+      <CardHeader className="bg-gradient-to-r from-blue-50 to-green-50 dark:from-blue-950/30 dark:to-green-950/30 border-b dark:border-zinc-800">
         <div className="flex items-center gap-2">
           <Sparkles className="h-5 w-5 text-blue-600 animate-pulse" />
           <CardTitle>Prediction Results</CardTitle>
@@ -87,7 +87,7 @@ export function ResultsCard({ prediction, isLoading }: ResultsCardProps) {
       </CardHeader>
       <CardContent className="pt-6 space-y-6">
         {/* Recommended Crop */}
-        <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-lg p-6 border-2 border-green-200">
+        <div className="bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-950/20 dark:to-blue-950/20 rounded-lg p-6 border-2 border-green-200 dark:border-green-900/50">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
               <div className="rounded-full bg-green-600 p-3 text-white">
@@ -148,9 +148,9 @@ export function ResultsCard({ prediction, isLoading }: ResultsCardProps) {
 
           <div className="grid grid-cols-1 gap-3">
             {/* Temperature */}
-            <div className="flex items-center justify-between p-4 bg-orange-50 rounded-lg border border-orange-200">
+            <div className="flex items-center justify-between p-4 bg-orange-50 dark:bg-orange-950/20 rounded-lg border border-orange-200 dark:border-orange-900/30">
               <div className="flex items-center gap-3">
-                <div className="rounded-full bg-orange-100 p-2">
+                <div className="rounded-full bg-orange-100 dark:bg-orange-900/40 p-2">
                   <Thermometer className="h-5 w-5 text-orange-600" />
                 </div>
                 <div>
@@ -164,9 +164,9 @@ export function ResultsCard({ prediction, isLoading }: ResultsCardProps) {
             </div>
 
             {/* Humidity */}
-            <div className="flex items-center justify-between p-4 bg-blue-50 rounded-lg border border-blue-200">
+            <div className="flex items-center justify-between p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg border border-blue-200 dark:border-blue-900/30">
               <div className="flex items-center gap-3">
-                <div className="rounded-full bg-blue-100 p-2">
+                <div className="rounded-full bg-blue-100 dark:bg-blue-900/40 p-2">
                   <Droplets className="h-5 w-5 text-blue-600" />
                 </div>
                 <div>
@@ -180,9 +180,9 @@ export function ResultsCard({ prediction, isLoading }: ResultsCardProps) {
             </div>
 
             {/* Rainfall */}
-            <div className="flex items-center justify-between p-4 bg-cyan-50 rounded-lg border border-cyan-200">
+            <div className="flex items-center justify-between p-4 bg-cyan-50 dark:bg-cyan-950/20 rounded-lg border border-cyan-200 dark:border-cyan-900/30">
               <div className="flex items-center gap-3">
-                <div className="rounded-full bg-cyan-100 p-2">
+                <div className="rounded-full bg-cyan-100 dark:bg-cyan-900/40 p-2">
                   <CloudRain className="h-5 w-5 text-cyan-600" />
                 </div>
                 <div>
@@ -198,7 +198,7 @@ export function ResultsCard({ prediction, isLoading }: ResultsCardProps) {
         </div>
 
         {/* Additional Info */}
-        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+        <div className="bg-yellow-50 dark:bg-yellow-950/20 border border-yellow-200 dark:border-yellow-900/30 rounded-lg p-4">
           <p className="text-sm text-yellow-800">
             <strong>💡 Tip:</strong> This recommendation is based on your soil composition and local climate data.
             Consider consulting with local agricultural experts for best results.

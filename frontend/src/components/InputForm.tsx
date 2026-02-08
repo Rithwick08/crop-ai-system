@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -40,7 +40,7 @@ export function InputForm({ onPredict, isLoading }: InputFormProps) {
 
   return (
     <Card className="shadow-lg hover:shadow-xl transition-shadow">
-      <CardHeader className="bg-gradient-to-r from-green-50 to-blue-50 border-b">
+      <CardHeader className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-950/30 dark:to-blue-950/30 border-b dark:border-zinc-800">
         <div className="flex items-center gap-2 mb-2">
           <FlaskConical className="h-5 w-5 text-green-600" />
           <CardTitle>Input Parameters</CardTitle>
@@ -54,7 +54,7 @@ export function InputForm({ onPredict, isLoading }: InputFormProps) {
           {/* Soil Nutrients Section */}
           <div className="space-y-4">
             <div className="flex items-center gap-2 mb-3">
-              <div className="rounded-full bg-green-100 p-1.5">
+              <div className="rounded-full bg-green-100 dark:bg-green-900/30 p-1.5">
                 <FlaskConical className="h-4 w-4 text-green-600" />
               </div>
               <h3 className="font-semibold text-sm">Soil Nutrients (kg/ha)</h3>
@@ -121,7 +121,7 @@ export function InputForm({ onPredict, isLoading }: InputFormProps) {
           {/* Soil pH Section */}
           <div className="space-y-4">
             <div className="flex items-center gap-2 mb-3">
-              <div className="rounded-full bg-blue-100 p-1.5">
+              <div className="rounded-full bg-blue-100 dark:bg-blue-900/30 p-1.5">
                 <Droplets className="h-4 w-4 text-blue-600" />
               </div>
               <h3 className="font-semibold text-sm">Soil Properties</h3>
@@ -151,7 +151,7 @@ export function InputForm({ onPredict, isLoading }: InputFormProps) {
           {/* Location Section */}
           <div className="space-y-4">
             <div className="flex items-center gap-2 mb-3">
-              <div className="rounded-full bg-purple-100 p-1.5">
+              <div className="rounded-full bg-purple-100 dark:bg-purple-900/30 p-1.5">
                 <MapPin className="h-4 w-4 text-purple-600" />
               </div>
               <h3 className="font-semibold text-sm">Location Details</h3>

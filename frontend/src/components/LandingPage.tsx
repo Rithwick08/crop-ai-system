@@ -1,23 +1,20 @@
+import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
-import { 
-  Sprout, 
-  Brain, 
-  Leaf, 
-  Droplets, 
-  TrendingUp, 
-  Shield, 
+import {
+  Sprout,
+  Brain,
+  Leaf,
+  Droplets,
+  TrendingUp,
+  Shield,
   ArrowRight,
   CheckCircle2,
   Sparkles
 } from 'lucide-react';
 
-interface LandingPageProps {
-  onGetStarted: () => void;
-}
-
-export function LandingPage({ onGetStarted }: LandingPageProps) {
+export function LandingPage() {
   const features = [
     {
       icon: Brain,
@@ -64,7 +61,7 @@ export function LandingPage({ onGetStarted }: LandingPageProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-white">
+    <>
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/10 to-blue-600/10"></div>
@@ -80,32 +77,34 @@ export function LandingPage({ onGetStarted }: LandingPageProps) {
                   Smart Farming
                 </Badge>
               </div>
-              
+
               <div className="space-y-4">
                 <h1 className="text-5xl md:text-6xl font-bold leading-tight">
                   <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
                     AI Crop Recommendation
                   </span>
                   <br />
-                  <span className="text-gray-900">System</span>
+                  <span className="text-gray-900 dark:text-gray-100">System</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-xl">
-                  Harness the power of artificial intelligence to make smart farming decisions. 
+                  Harness the power of artificial intelligence to make smart farming decisions.
                   Get personalized crop recommendations based on soil nutrients, climate, and location data.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  onClick={onGetStarted}
-                  size="lg" 
+                <Button
+                  asChild
+                  size="lg"
                   className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
                 >
-                  Get Started
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <Link to="/estimate">
+                    Get Started
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   size="lg"
                   className="border-2 text-lg px-8 py-6"
                 >
@@ -142,9 +141,9 @@ export function LandingPage({ onGetStarted }: LandingPageProps) {
                   <p className="text-sm opacity-90">Making agriculture more efficient and sustainable</p>
                 </div>
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-xl p-4 hidden lg:block">
+              <div className="absolute -bottom-6 -right-6 bg-white dark:bg-zinc-900 rounded-xl shadow-xl p-4 hidden lg:block">
                 <div className="flex items-center gap-3">
-                  <div className="rounded-full bg-green-100 p-3">
+                  <div className="rounded-full bg-green-100 dark:bg-green-900/30 p-3">
                     <TrendingUp className="h-6 w-6 text-green-600" />
                   </div>
                   <div>
@@ -159,7 +158,7 @@ export function LandingPage({ onGetStarted }: LandingPageProps) {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white dark:bg-zinc-900/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Badge className="bg-blue-600 text-white mb-4">Features</Badge>
@@ -180,7 +179,7 @@ export function LandingPage({ onGetStarted }: LandingPageProps) {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
-                    <div className="rounded-full bg-white p-3">
+                    <div className="rounded-full bg-white dark:bg-zinc-900 p-3">
                       <feature.icon className="h-6 w-6 text-green-600" />
                     </div>
                   </div>
@@ -196,7 +195,7 @@ export function LandingPage({ onGetStarted }: LandingPageProps) {
       </section>
 
       {/* Crops Gallery Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-green-50 to-blue-50">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-950/20 dark:to-blue-950/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Badge className="bg-green-600 text-white mb-4">Crop Database</Badge>
@@ -229,7 +228,7 @@ export function LandingPage({ onGetStarted }: LandingPageProps) {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white dark:bg-zinc-900/50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
@@ -256,13 +255,15 @@ export function LandingPage({ onGetStarted }: LandingPageProps) {
                 ))}
               </div>
 
-              <Button 
-                onClick={onGetStarted}
-                size="lg" 
+              <Button
+                asChild
+                size="lg"
                 className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white text-lg px-8 py-6 mt-6"
               >
-                Start Your Journey
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <Link to="/estimate">
+                  Start Your Journey
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -280,14 +281,16 @@ export function LandingPage({ onGetStarted }: LandingPageProps) {
               Get instant AI-powered crop recommendations tailored to your land and climate
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button 
-                onClick={onGetStarted}
-                size="lg" 
+              <Button
+                asChild
+                size="lg"
                 variant="secondary"
                 className="text-lg px-8 py-6 bg-white text-green-600 hover:bg-gray-100"
               >
-                Get Started Now
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <Link to="/estimate">
+                  Get Started Now
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -315,6 +318,6 @@ export function LandingPage({ onGetStarted }: LandingPageProps) {
           </div>
         </div>
       </footer>
-    </div>
+    </>
   );
 }

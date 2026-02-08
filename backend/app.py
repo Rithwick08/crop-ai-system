@@ -44,7 +44,7 @@ def predict(d: InputData):
     ]])
 
     pred = model.predict(features)[0]
-    probs =model.predict_proba([features])[0]
+    probs = model.predict_proba(features)[0]
     top3 = sorted(
         zip(model.classes_, probs),
         key=lambda x: x[1],
@@ -58,12 +58,12 @@ def predict(d: InputData):
         confidence = float(top3[0][1])
     
     return {
-    "crop": prediction,
-    "temperature": temperature,
-    "humidity": humidity,
-    "rainfall": rainfall,
-    "probabilities": {
-        classes[i]: float(probs[i])
-        for i in range(len(classes))
+        "crop": prediction,
+        "temperature": w["temperature"],
+        "humidity": w["humidity"],
+        "rainfall": rain,
+        "probabilities": {
+            model.classes_[i]: float(probs[i])
+            for i in range(len(model.classes_))
+        }
     }
-}
