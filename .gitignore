@@ -41,3 +41,5 @@ Thumbs.db
 *.backup
 *.tmp
 *.temp
+
+backend/data/rainfall_raw.csv
