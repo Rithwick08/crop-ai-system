@@ -139,7 +139,10 @@
             "monsoon": "Monsoon (Kharif)",
             "winter": "Winter (Rabi)",
             "summer": "Summer (Zaid)"
-        }
+        },
+        "selectState": "Select State",
+        "soilType": "Soil Type",
+        "selectSoilType": "Select Soil Type"
     },
     "results": {
         "aiAnalysis": "AI Analysis",
@@ -169,7 +172,8 @@
         "tipMessage": "This recommendation is based on your soil composition and local climate data. Consider consulting with local agricultural experts for best results.",
         "rank1": "1st",
         "rank2": "2nd",
-        "rank3": "3rd"
+        "rank3": "3rd",
+        "recommendedSchemes": "Recommended Government Schemes"
     },
     "chatbot": {
         "title": "AI Assistant",
@@ -223,5 +227,94 @@
         "cityDesc": "Enter your city or district name",
         "analyzing": "Analyzing Data...",
         "predictBtn": "Predict Best Crop"
+    },
+    "common": {
+        "backToHome": "Back to Home"
+    },
+    "schemes": {
+        "menu": "Schemes",
+        "title": "Government Schemes",
+        "subtitle": "Explore financial support, insurance, and subsidies available for farmers.",
+        "viewDetails": "View Details",
+        "viewAll": "View All Schemes",
+        "benefits": "Benefit",
+        "readMore": "Read More"
+    },
+    "schemesData": {
+        "pm-kisan": {
+            "name": "PM-KISAN",
+            "benefit": "₹6,000 per year",
+            "details": "Income support scheme for farmers. Eligibility: All farmers."
+        },
+        "soil-health-card": {
+            "name": "Soil Health Card Scheme",
+            "benefit": "Free soil testing",
+            "details": "Provides soil nutrient analysis. Eligibility: All farmers."
+        },
+        "pmksy": {
+            "name": "PMKSY",
+            "benefit": "Subsidy on drip irrigation",
+            "details": "Micro irrigation and water efficiency. Eligibility: All farmers."
+        },
+        "nfsm": {
+            "name": "National Food Security Mission",
+            "benefit": "Seed and fertilizer subsidy",
+            "details": "Promotes production of food crops. Eligibility: Farmers growing cereals and pulses."
+        },
+        "oilseed-mission": {
+            "name": "Oilseed Mission",
+            "benefit": "Input subsidy",
+            "details": "Promotes oilseed farming. Eligibility: Oilseed farmers."
+        },
+        "cotton-msp": {
+            "name": "Cotton MSP Scheme",
+            "benefit": "Price support",
+            "details": "Minimum support price for cotton. Eligibility: Cotton farmers."
+        },
+        "pkvy": {
+            "name": "Paramparagat Krishi Vikas Yojana",
+            "benefit": "Subsidy",
+            "details": "Supports organic farming. Eligibility: Organic farmers."
+        },
+        "rythu-bandhu": {
+            "name": "Rythu Bandhu",
+            "benefit": "₹5,000 per acre per season",
+            "details": "Investment support scheme. Eligibility: Farmers in Telangana."
+        },
+        "rythu-bima": {
+            "name": "Rythu Bima",
+            "benefit": "₹5 lakh insurance",
+            "details": "Farmers life insurance. Eligibility: Farmers in Telangana."
+        },
+        "ysr-rythu-bharosa": {
+            "name": "YSR Rythu Bharosa",
+            "benefit": "₹13,500 per year",
+            "details": "Income support scheme. Eligibility: Farmers in Andhra Pradesh."
+        },
+        "ap-crop-insurance": {
+            "name": "Andhra Pradesh Crop Insurance",
+            "benefit": "Insurance coverage",
+            "details": "Crop insurance support. Eligibility: AP farmers."
+        },
+        "nmsa": {
+            "name": "National Mission on Sustainable Agriculture",
+            "benefit": "Subsidy and support",
+            "details": "Climate-resilient farming. Eligibility: All farmers."
+        },
+        "millet-mission": {
+            "name": "Millet Mission",
+            "benefit": "Input subsidy",
+            "details": "Promotes millet farming. Eligibility: Millet farmers."
+        },
+        "nhm": {
+            "name": "National Horticulture Mission",
+            "benefit": "Subsidy on inputs",
+            "details": "Supports fruits and vegetables. Eligibility: Fruit farmers."
+        },
+        "coffee-board": {
+            "name": "Coffee Board Subsidy",
+            "benefit": "Subsidy",
+            "details": "Coffee cultivation support. Eligibility: Coffee farmers."
+        }
     }
 }

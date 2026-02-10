@@ -1,0 +1,196 @@
+[
+    {
+        "id": "pm-kisan",
+        "name": "PM-KISAN",
+        "image": "https://images.unsplash.com/photo-1595837728253-2736780c986c?auto=format&fit=crop&w=800&q=80",
+        "benefit": "₹6,000 per year",
+        "details": "Income support scheme for farmers. Eligibility: All farmers.",
+        "relatedCrops": [
+            "All"
+        ],
+        "link": "https://pmkisan.gov.in/",
+        "state": "All"
+    },
+    {
+        "id": "soil-health-card",
+        "name": "Soil Health Card Scheme",
+        "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80",
+        "benefit": "Free soil testing",
+        "details": "Provides soil nutrient analysis. Eligibility: All farmers.",
+        "relatedCrops": [
+            "All"
+        ],
+        "link": "https://soilhealth.dac.gov.in/",
+        "state": "All"
+    },
+    {
+        "id": "pmksy",
+        "name": "PMKSY",
+        "image": "https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?auto=format&fit=crop&w=800&q=80",
+        "benefit": "Subsidy on drip irrigation",
+        "details": "Micro irrigation and water efficiency. Eligibility: All farmers.",
+        "relatedCrops": [
+            "All"
+        ],
+        "link": "https://pmksy.gov.in/",
+        "state": "All"
+    },
+    {
+        "id": "nfsm",
+        "name": "National Food Security Mission",
+        "image": "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=800&q=80",
+        "benefit": "Seed and fertilizer subsidy",
+        "details": "Promotes production of food crops. Eligibility: Farmers growing cereals and pulses.",
+        "relatedCrops": [
+            "Rice",
+            "Wheat",
+            "Pulses",
+            "Maize",
+            "Chickpea",
+            "Lentil"
+        ],
+        "link": "https://nfsm.gov.in/",
+        "state": "All"
+    },
+    {
+        "id": "oilseed-mission",
+        "name": "Oilseed Mission",
+        "image": "https://images.unsplash.com/photo-1473973266408-ed4e27abdd47?auto=format&fit=crop&w=800&q=80",
+        "benefit": "Input subsidy",
+        "details": "Promotes oilseed farming. Eligibility: Oilseed farmers.",
+        "relatedCrops": [
+            "Groundnut",
+            "Mustard",
+            "Soybean"
+        ],
+        "link": "https://nmoop.gov.in/",
+        "state": "All"
+    },
+    {
+        "id": "cotton-msp",
+        "name": "Cotton MSP Scheme",
+        "image": "https://images.unsplash.com/photo-1605335805545-d41a5d914b43?auto=format&fit=crop&w=800&q=80",
+        "benefit": "Price support",
+        "details": "Minimum support price for cotton. Eligibility: Cotton farmers.",
+        "relatedCrops": [
+            "Cotton"
+        ],
+        "link": "https://cotcorp.org.in/",
+        "state": "All"
+    },
+    {
+        "id": "pkvy",
+        "name": "Paramparagat Krishi Vikas Yojana",
+        "image": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80",
+        "benefit": "Subsidy",
+        "details": "Supports organic farming. Eligibility: Organic farmers.",
+        "relatedCrops": [
+            "All"
+        ],
+        "link": "https://pgsindia-ncof.gov.in/",
+        "state": "All"
+    },
+    {
+        "id": "rythu-bandhu",
+        "name": "Rythu Bandhu",
+        "image": "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=800&q=80",
+        "benefit": "₹5,000 per acre per season",
+        "details": "Investment support scheme. Eligibility: Farmers in Telangana.",
+        "relatedCrops": [
+            "All"
+        ],
+        "link": "https://rythubandhu.telangana.gov.in/",
+        "state": "Telangana"
+    },
+    {
+        "id": "rythu-bima",
+        "name": "Rythu Bima",
+        "image": "https://images.unsplash.com/photo-1544256718-3bcf237f3974?auto=format&fit=crop&w=800&q=80",
+        "benefit": "₹5 lakh insurance",
+        "details": "Farmers life insurance. Eligibility: Farmers in Telangana.",
+        "relatedCrops": [
+            "All"
+        ],
+        "link": "https://rythubima.telangana.gov.in/",
+        "state": "Telangana"
+    },
+    {
+        "id": "ysr-rythu-bharosa",
+        "name": "YSR Rythu Bharosa",
+        "image": "https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=800&q=80",
+        "benefit": "₹13,500 per year",
+        "details": "Income support scheme. Eligibility: Farmers in Andhra Pradesh.",
+        "relatedCrops": [
+            "All"
+        ],
+        "link": "https://ysrrythubharosa.ap.gov.in/",
+        "state": "Andhra Pradesh"
+    },
+    {
+        "id": "ap-crop-insurance",
+        "name": "Andhra Pradesh Crop Insurance",
+        "image": "https://images.unsplash.com/photo-1625246333195-58197bd47f3b?auto=format&fit=crop&w=800&q=80",
+        "benefit": "Insurance coverage",
+        "details": "Crop insurance support. Eligibility: AP farmers.",
+        "relatedCrops": [
+            "All"
+        ],
+        "link": "https://apagrisnet.gov.in/",
+        "state": "Andhra Pradesh"
+    },
+    {
+        "id": "nmsa",
+        "name": "National Mission on Sustainable Agriculture",
+        "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80",
+        "benefit": "Subsidy and support",
+        "details": "Climate-resilient farming. Eligibility: All farmers.",
+        "relatedCrops": [
+            "All"
+        ],
+        "link": "https://nmsa.dac.gov.in/",
+        "state": "All"
+    },
+    {
+        "id": "millet-mission",
+        "name": "Millet Mission",
+        "image": "https://images.unsplash.com/photo-1662545802316-24e526432657?auto=format&fit=crop&w=800&q=80",
+        "benefit": "Input subsidy",
+        "details": "Promotes millet farming. Eligibility: Millet farmers.",
+        "relatedCrops": [
+            "Millets",
+            "Jowar",
+            "Bajra"
+        ],
+        "link": "https://millets.res.in/",
+        "state": "All"
+    },
+    {
+        "id": "nhm",
+        "name": "National Horticulture Mission",
+        "image": "https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=800&q=80",
+        "benefit": "Subsidy on inputs",
+        "details": "Supports fruits and vegetables. Eligibility: Fruit farmers.",
+        "relatedCrops": [
+            "Banana",
+            "Mango",
+            "Orange",
+            "Papaya",
+            "Pomegranate",
+            "Watermelon"
+        ],
+        "link": "https://nhm.gov.in/",
+        "state": "All"
+    },
+    {
+        "id": "coffee-board",
+        "name": "Coffee Board Subsidy",
+        "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80",
+        "benefit": "Subsidy",
+        "details": "Coffee cultivation support. Eligibility: Coffee farmers.",
+        "relatedCrops": [
+            "Coffee"
+        ],
+        "link": "https://coffeeboard.gov.in/",
+        "state": "All"
+    }
+]

@@ -8,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from rainfall_lookup import get_rainfall
 from weather import get_weather
+from soil_service import get_locations
 
 model = joblib.load("model.pkl")
 
@@ -35,6 +36,10 @@ class InputData(BaseModel):
 @app.get("/health")
 def health_check():
     return {"status": "ok", "message": "Backend is running"}
+
+@app.get("/locations")
+def locations():
+    return get_locations()
 
 @app.post("/predict")
 def predict(d: InputData):
@@ -161,6 +166,7 @@ def login(login_data: LoginRequest, db = Depends(get_db)):
             headers={"WWW-Authenticate": "Bearer"},
         )
     
+    access_token_expires = timedelta(minutes=auth.ACCESS_TOKEN_EXPIRE_MINUTES)
     access_token = auth.create_access_token(
         data={"sub": user["username"]}, expires_delta=access_token_expires
     )

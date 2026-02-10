@@ -11,6 +11,7 @@ import { ProtectedRoute } from './components/ProtectedRoute';
 
 import { ChatBot } from './components/ChatBot';
 import { AnalyticsPage } from './components/AnalyticsPage';
+import { SchemesPage } from './components/SchemesPage';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
               <Route path="/" element={<LandingPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/signup" element={<SignupPage />} />
+              <Route path="/schemes" element={<SchemesPage />} />
               <Route path="/analytics" element={<ProtectedRoute><AnalyticsPage /></ProtectedRoute>} />
               <Route
                 path="/estimate"

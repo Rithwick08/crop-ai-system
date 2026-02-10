@@ -14,6 +14,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { SchemesSection } from './SchemesSection';
 
 export function LandingPage() {
   const { t } = useTranslation();
@@ -246,6 +247,9 @@ export function LandingPage() {
           </div>
         </div>
       </section>
+
+      {/* Government Schemes Section */}
+      <SchemesSection />
 
       {/* Crops Gallery Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-950/20 dark:to-blue-950/20">

@@ -5,7 +5,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '.
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Loader2, TrendingUp, CloudRain, DollarSign, Sprout } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import districtsData from '../data/districts.json';
+// import districtsData from '../data/districts.json';
 
 interface RainfallData {
     year: number;
@@ -27,12 +27,37 @@ export function AnalyticsPage() {
     const [loadingRainfall, setLoadingRainfall] = useState(false);
     const [loadingEconomics, setLoadingEconomics] = useState(false);
 
-    // Get unique states from districts.json
-    const states = Array.from(new Set((districtsData as any[]).map(d => d.state))).sort();
+    // Get unique states from backend
+    const [states, setStates] = useState<string[]>([]);
 
     useEffect(() => {
-        fetchRainfallData();
+        fetchStates();
+    }, []);
+
+    useEffect(() => {
+        if (selectedState) {
+            fetchRainfallData();
+        }
     }, [selectedState]);
+
+    const fetchStates = async () => {
+        try {
+            const response = await fetch('http://127.0.0.1:8000/locations');
+            if (response.ok) {
+                const data = await response.json();
+                const stateList = Object.keys(data).sort();
+                setStates(stateList);
+                // Default to Telangana if available, else first state
+                if (stateList.includes('Telangana')) {
+                    setSelectedState('Telangana');
+                } else if (stateList.length > 0) {
+                    setSelectedState(stateList[0]);
+                }
+            }
+        } catch (error) {
+            console.error("Failed to fetch states:", error);
+        }
+    };
 
     useEffect(() => {
         fetchEconomicsData();
@@ -41,7 +66,7 @@ export function AnalyticsPage() {
     const fetchRainfallData = async () => {
         setLoadingRainfall(true);
         try {
-            const response = await fetch(`http://localhost:8000/analytics/rainfall/${selectedState}`);
+            const response = await fetch(`http://127.0.0.1:8000/analytics/rainfall/${selectedState}`);
             if (response.ok) {
                 const data = await response.json();
                 // Ensure data is sorted by year
@@ -62,7 +87,7 @@ export function AnalyticsPage() {
     const fetchEconomicsData = async () => {
         setLoadingEconomics(true);
         try {
-            const response = await fetch(`http://localhost:8000/analytics/economics`);
+            const response = await fetch(`http://127.0.0.1:8000/analytics/economics`);
             if (response.ok) {
                 const data = await response.json();
                 setEconomicData(data);

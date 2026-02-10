@@ -4,6 +4,7 @@ import { PredictionResult } from '../types/crop';
 import { Wheat, TrendingUp, Thermometer, Droplets, CloudRain, Sparkles, Loader2, ShoppingBag, ExternalLink } from 'lucide-react';
 import { cropFertilizers } from '../data/fertilizers';
 import { useTranslation } from 'react-i18next';
+import schemesData from '../data/schemes.json';
 
 interface ResultsCardProps {
   prediction: PredictionResult | null;
@@ -278,6 +279,50 @@ export function ResultsCard({ prediction, isLoading }: ResultsCardProps) {
             </div>
           )}
         </div>
+
+        {/* Recommended Schemes */}
+        {prediction.crop && (
+          <div className="space-y-4 pt-4 border-t dark:border-zinc-800">
+            <h3 className="font-semibold flex items-center gap-2">
+              <Sparkles className="h-5 w-5 text-yellow-600" />
+              {t('results.recommendedSchemes', 'Recommended Government Schemes')}
+            </h3>
+            <div className="grid grid-cols-1 gap-4">
+              {schemesData
+                .filter(scheme =>
+                  scheme.relatedCrops.includes("All") ||
+                  scheme.relatedCrops.some(c => c.toLowerCase() === prediction.crop.toLowerCase())
+                )
+                .slice(0, 3)
+                .map(scheme => (
+                  <div key={scheme.id} className="flex items-start gap-4 p-4 bg-yellow-50/50 dark:bg-yellow-900/10 rounded-lg border border-yellow-100 dark:border-yellow-900/30 hover:shadow-md transition-shadow">
+                    <img
+                      src={scheme.image}
+                      alt={scheme.name}
+                      className="w-16 h-16 rounded-md object-cover hidden sm:block"
+                    />
+                    <div className="flex-1">
+                      <div className="flex justify-between items-start">
+                        <h4 className="font-bold text-gray-900 dark:text-gray-100">{t(`schemesData.${scheme.id}.name`, scheme.name)}</h4>
+                        <span className="text-xs font-bold text-green-600 bg-green-100 dark:bg-green-900/30 px-2 py-1 rounded-full whitespace-nowrap">
+                          {t(`schemesData.${scheme.id}.benefit`, scheme.benefit)}
+                        </span>
+                      </div>
+                      <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{t(`schemesData.${scheme.id}.details`, scheme.details)}</p>
+                      <a
+                        href={scheme.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-medium text-blue-600 dark:text-blue-400 hover:underline mt-2 inline-flex items-center gap-1"
+                      >
+                        View Details <ExternalLink className="h-3 w-3" />
+                      </a>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
+        )}
 
         {/* Additional Info */}
         <div className="bg-yellow-50 dark:bg-yellow-950/20 border border-yellow-200 dark:border-yellow-900/30 rounded-lg p-4">

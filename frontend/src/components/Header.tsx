@@ -56,7 +56,7 @@ export function Header() {
 
     return (
         <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:bg-zinc-950/80 dark:border-zinc-800">
-            <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div className="w-full px-6 h-16 flex items-center justify-between">
                 <Link to="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
                     <div className="flex items-center gap-1">
                         <div className="rounded-lg bg-gradient-to-br from-green-500 to-green-600 p-1.5">
@@ -72,6 +72,9 @@ export function Header() {
                 <nav className="flex items-center gap-6">
                     <Link to="/" className={`text-sm transition-colors ${isActive('/')}`}>
                         {t('header.home')}
+                    </Link>
+                    <Link to="/schemes" className={`text-sm transition-colors ${isActive('/schemes')}`}>
+                        {t('schemes.menu', 'Schemes')}
                     </Link>
                     {user && (
                         <>
@@ -116,13 +119,13 @@ export function Header() {
                                         <Edit className="mr-2 h-4 w-4" />
                                         <span>{t('header.changeUsername')}</span>
                                     </DropdownMenuItem>
+                                    <DropdownMenuSeparator />
+                                    <DropdownMenuItem onClick={handleLogout} className="cursor-pointer text-red-600 focus:text-red-600 dark:text-red-400 dark:focus:text-red-400">
+                                        <LogOut className="mr-2 h-4 w-4" />
+                                        <span>{t('header.logout')}</span>
+                                    </DropdownMenuItem>
                                 </DropdownMenuContent>
                             </DropdownMenu>
-
-                            <Button onClick={handleLogout} variant="ghost" size="sm" className="text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20">
-                                <LogOut className="h-4 w-4 md:mr-2" />
-                                <span className="hidden md:inline">{t('header.logout')}</span>
-                            </Button>
                         </>
                     ) : (
                         <div className="flex items-center gap-4">
@@ -168,6 +171,6 @@ export function Header() {
                     <ModeToggle />
                 </nav>
             </div>
-        </header>
+        </header >
     );
 }
